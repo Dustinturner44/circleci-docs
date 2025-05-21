@@ -27,10 +27,12 @@ TIP: If your organization already has a namespace, you will receive an error if 
 circleci runner resource-class create <namespace>/<resource-class> <description> --generate-token
 ```
 +
+TIP: Resource class descriptions are limited to 250 characters. Extra characters will be trimmed from the description.
 Make sure to replace `<namespace>` and `<resource-class>` with your org namespace and desired resource class name, respectively. You may optionally add a description.
 +
 Example: `circleci runner resource-class create my-namespace/my-resource-class my-description --generate-token`.
 +
 The resource class token is returned after the runner resource class is successfully created.
 +
+TIP: Token nicknames are limited to 100 characters. Extra characters will be trimmed from the nickname.
 CAUTION: The token cannot be retrieved again, so be sure to store it safely.
