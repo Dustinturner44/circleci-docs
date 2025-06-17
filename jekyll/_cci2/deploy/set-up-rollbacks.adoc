@@ -28,7 +28,7 @@ The rest of this guide covers how to set up rollbacks using a custom rollback pi
 === 2. Navigate to project overview
 
 . In the CircleCI dashboard, navigate to *Organization Home* from the sidebar.
-. Select the *Overview* link for your project.
+. Select the *Overview* link for your project. 
 
 You will see a red Rollback button with a dropdown option on the project overview page.
 
