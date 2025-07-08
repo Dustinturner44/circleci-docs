@@ -258,6 +258,8 @@ en:
             link: windows-images-support-policy
           - name: Xcode image policy
             link: xcode-policy
+          - name: Machine/Convenience Image Lifecycle
+            link: machine-convenience-image-lifecycle
 
   - name: Execute jobs on self-hosted runners
     icon: icons/sidebar/build-agent.svg
