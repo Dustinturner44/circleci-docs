@@ -1,4 +1,6 @@
 # CircleCI Docs Static Site: Technical Documentation
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDustinturner44%2Fcircleci-docs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FDustinturner44%2Fcircleci-docs?ref=badge_shield)
+
 
 Welcome to the comprehensive technical documentation for the CircleCI Docs Static Site project. This documentation is designed to help developers, content authors, and contributors understand the project's architecture, workflow, and best practices.
 
@@ -107,3 +109,7 @@ We welcome contributions to both the documentation content and the technical inf
 3. Create a branch for your changes
 4. Submit a pull request
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDustinturner44%2Fcircleci-docs.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FDustinturner44%2Fcircleci-docs?ref=badge_large)
