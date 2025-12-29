@@ -75,6 +75,6 @@
     "@fontsource/inter": "^5.2.5",
     "@fontsource/ibm-plex-mono": "^5.2.5",
     "@tailwindcss/postcss": "^4.1.4",
-    "tailwindcss": "^4.1.4"
+    "tailwindcss": "^4.1.17"
   }
 }
