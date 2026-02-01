@@ -1,47 +1,55 @@
 - pipeline: 692191
   refs:
   - refs/heads/DOCSS-1818-deploys-updates
+  fail_on_prepare_env_warning: true
   events:
   - type: PUSH
   - type: WEBHOOK
     totp: true
-  fail_on_prepare_env_warning: true
   actions:
   - action: gradle build
     type: BUILD
-    docker_image_name: library/gradle
-    docker_image_tag: 8.12
     execute_commands:
     - gradle build
     shell: BASH
+    docker_image_name: library/gradle
+    docker_image_tag: 8.12
+    services:
+    - type: MARIADB
+      persistent: true
+      connection:
+        host: mariadb
+        user: root
+        password: root
+      pass_variables: true
   - action: go build
     type: BUILD
-    docker_image_name: library/golang
-    docker_image_tag: 1.24
     execute_commands:
     - go test
     - go build
+    shell: BASH
     volume_mappings:
     - /:/src/github.com/Dustinturner44/circleci-docs
-    shell: BASH
+    docker_image_name: library/golang
+    docker_image_tag: 1.24
   - action: mvn clean install
     type: BUILD
-    docker_image_name: library/maven
-    docker_image_tag: 3.9.9
     execute_commands:
     - mvn clean install
     cached_dirs:
     - /root/.m2/repository
+    docker_image_name: library/maven
+    docker_image_tag: 3.9.9
     unit_tests_suite: my_first_suite
     unit_tests_path: /api-v1/
   - action: npm test
     type: BUILD
-    docker_image_name: library/node
-    docker_image_tag: 22
     execute_commands:
     - "# yarn install"
     - npm install
     - npm test
+    shell: BASH
     volume_mappings:
     - /api-v1/:/buddy/circleci-docs-2
-    shell: BASH
+    docker_image_name: library/node
+    docker_image_tag: 22
